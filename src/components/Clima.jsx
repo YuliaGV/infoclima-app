@@ -7,8 +7,6 @@ import {GiWaterDrop } from "react-icons/gi";
 export const Clima = ({resultado}) => {
 
     const { name, main, weather, sys, wind } = resultado;
-    console.log(resultado);
-
 
     return (
         <div className="clima">

@@ -98,9 +98,6 @@ export const Formulario = ( { busqueda, setBusqueda, setConsultar } ) => {
 
 
                    
-
-
-
         </>
     )
 }

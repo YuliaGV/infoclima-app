@@ -1,4 +1,5 @@
 import React from 'react';
+import { getClimaDescription } from '../helpers/getDescription';
 import { Card, CardContent} from '@mui/material';
 import { FiWind } from "react-icons/fi";
 import {GiWaterDrop } from "react-icons/gi";
@@ -18,7 +19,11 @@ export const Clima = ({resultado}) => {
                     <div className="clima-info">
                         <h2>{name}, {sys.country}</h2>
                         <p className="clima-info-temp">
-                            <span className="clima-temp">{parseFloat(main.temp - 273.15).toFixed(2)} &#8451; </span>
+                            <p className="clima-temp">{parseFloat(main.temp - 273.15).toFixed(2)} &#8451; </p>
+                            <img src={`http://openweathermap.org/img/wn/${weather[0] ? weather[0].icon : ''}@2x.png`} alt="Clima" className="clima-img"/>
+                        </p>
+                        <p className="clima-info-descripcion">
+                            {getClimaDescription(weather[0].description)}
                         </p>
                     </div>
                     <div className="clima-minmax">
@@ -46,7 +51,7 @@ export const Clima = ({resultado}) => {
             ) : (
                 <Card className="clima-card" >
                     <CardContent>
-                            <h3>Actualmente no hay resultados</h3>
+                            <h3>No hay resultados para mostrar, haz una consulta</h3>
                     </CardContent>
                 </Card>
 

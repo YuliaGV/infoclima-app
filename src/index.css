@@ -1,10 +1,10 @@
 body {
   background-image: linear-gradient(
       115deg,
-      rgba(230, 188, 72, 0.8),
-      rgba(113, 119, 233, 0.4)
+      rgba(224, 205, 152, 0.733),
+      rgba(136, 163, 240, 0.795)
     ),
-    url(https://cdn.pixabay.com/photo/2016/03/27/07/32/clouds-1282314_960_720.jpg);
+    url(https://cdn.pixabay.com/photo/2018/05/30/15/39/thunderstorm-3441687_960_720.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,9 +20,22 @@ code {
 }
 
 
+/*Form buscar clima*/
+.form-buscar{
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+
+/* Resultado clima */
 .clima-temp{
-  color:rgba(113, 119, 233);
-  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color:rgb(54, 59, 156);
+  font-size: 1.5rem;
   font-weight: bold;
   margin-top: 1rem;
 }
@@ -35,6 +48,19 @@ code {
 .clima-info-detalle{
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.clima-info-descripcion{
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+/*Clima mundo*/
+.card{
+  background-color: rgb(255, 209, 167) !important;
 }

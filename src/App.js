@@ -3,6 +3,7 @@ import { Grid } from '@mui/material';
 import Container from '@mui/material/Container';
 import { Formulario } from './components/Formulario';
 import { Clima } from './components/Clima';
+import { ClimaMundo } from './components/ClimaMundo';
 
 import logo from './img/logo.png';
 
@@ -42,17 +43,18 @@ function App() {
 
       <Container style={{ textAlign: 'center' }}>
 
+        <img src={logo} alt="logo" />
+
         <Grid
         container
-        spacing={12}
-        alignItems="center"
-        justify="center"
-        style={{ minHeight: '100vh' }}
-        
+        spacing={3}
         >
 
-          <Grid item md={5} xs={12}>
-            <img src={logo} alt="logo" />
+          <Grid item md={12} xs={12}>
+            <ClimaMundo />
+          </Grid>
+
+          <Grid item md={6} xs={12}>
             <h3>Encuentra el clima actual</h3>
             <Formulario 
               busqueda={busqueda}
@@ -62,14 +64,18 @@ function App() {
             
           </Grid>
 
-          <Grid item md={7} xs={12}>
+          <Grid item md={6} xs={12}>
             <h3>Resultado</h3>
             <Clima
               resultado={resultado}
             />
           </Grid>
+
+
+
         </Grid>
 
+       
 
       </Container>
     </div>

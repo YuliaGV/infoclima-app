@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FormControl, Input, Select, InputLabel, MenuItem, Button, Alert } from '@mui/material'
+import { FormControl, Select, InputLabel, TextField, MenuItem, Button, Alert } from '@mui/material'
 import { AiOutlineSend } from "react-icons/ai";
 
 export const Formulario = ( { busqueda, setBusqueda, setConsultar } ) => {
@@ -34,70 +34,79 @@ export const Formulario = ( { busqueda, setBusqueda, setConsultar } ) => {
         <>
             {error ? <Alert severity="error">Todos los campos son obligatorios</Alert> : null}
 
-            <FormControl
-                fullWidth
-                required
-                margin="normal"
-            >
-                <InputLabel id="demo-simple-select-label">País</InputLabel>
-                <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    name = "pais"
-                    value = {pais}
-                    label="País"
-                    onChange = {handleChange}
-                >
-                    <MenuItem value=""> <em>Selecciona un país</em> </MenuItem>
-                    <MenuItem value="CO">Colombia</MenuItem>
-                    <MenuItem value="BR">Brasil</MenuItem>
-                    <MenuItem value="CL">Chile</MenuItem>
-                    <MenuItem value="PE">Perú</MenuItem>
-                    <MenuItem value="AR">Argentina</MenuItem>
-                    <MenuItem value="MX">México</MenuItem>
-                    <MenuItem value="ES">España</MenuItem>
-                    <MenuItem value="US">Estados Unidos</MenuItem>
-                </Select>
+            <div className="form-buscar">
 
-            </FormControl>
+                <form onSubmit={handleSubmit}>
+                    <FormControl
+                        fullWidth
+                        margin="normal"
+                    >
+                        <InputLabel id="demo-simple-select-label">País</InputLabel>
+                        <Select
+                            style={{
+                                color: 'black',
+                            }}
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            name = "pais"
+                            value = {pais}
+                            label="País"
+                            onChange = {handleChange}
+                        >
+                            <MenuItem value=""> <em>Selecciona un país</em> </MenuItem>
+                            <MenuItem value="CO">Colombia</MenuItem>
+                            <MenuItem value="BR">Brasil</MenuItem>
+                            <MenuItem value="CL">Chile</MenuItem>
+                            <MenuItem value="AR">Argentina</MenuItem>
+                            <MenuItem value="MX">México</MenuItem>
+                            <MenuItem value="US">Estados Unidos</MenuItem>
+                            <MenuItem value="CA">Canadá</MenuItem>
+                            <MenuItem value="ES">España</MenuItem>
+                            <MenuItem value="FR">Francia</MenuItem>
+                            <MenuItem value="DE">Alemania</MenuItem>
+                            <MenuItem value="GB">Reino Unido</MenuItem>
+                            <MenuItem value="AU">Australia</MenuItem>
+                            <MenuItem value="JP">Japón</MenuItem>
+                            <MenuItem value="RU">Rusia</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl
+                    fullWidth
+                    focused
+                    required
+                    margin="normal"
+                    >
+                        <TextField
+                            id="ciudad"
+                            style={{
+                                color: 'black',
+                            }}
+                            name="ciudad"
+                            label="Ciudad"
+                            value = {ciudad}
+                            onChange = {handleChange}
+                            autoComplete="off"
+                        />
+                        
+                    </FormControl>
+                    <FormControl 
+                        fullWidth
+                        margin="normal"
+                    >
+                        <Button
+                            type = "submit"
+                            variant = "contained"
+                            color = "primary"
+                            onClick = {handleSubmit}
+                            startIcon = {<AiOutlineSend />}
+                        >
+                            Buscar Clima
+                        </Button>
+                    </FormControl>
 
-            <FormControl
-                fullWidth
-                focused
-                required
-                margin="normal"
-                variant="outlined"
-            >
-                <Input
-                    autoFocus = {true}
-                    type = "text"
-                    name = "ciudad"
-                    id = "ciudad"
-                    placeholder = "Escribe una ciudad..."
-                    value = {ciudad}
-                    onChange = {handleChange} 
-                />
-            </FormControl>
+                    </form>     
 
-            <FormControl
-                fullWidth
-                required
-                margin="normal"
-            >
-                <Button
-                    variant="contained"
-                    color="primary"
-                    type="submit"
-                    onClick = {handleSubmit}
-                    endIcon={<AiOutlineSend />}
-                >
-                    Buscar
-                </Button>
-            </FormControl>
-
-
-
-                   
+                </div>      
         </>
     )
 }

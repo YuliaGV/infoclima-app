@@ -75,7 +75,7 @@ export const ClimaMundo = () => {
                             <div>
                                 <div className="clima-temp">
                                     <p className="clima-temp">{parseFloat(mainNY.temp - 273.15).toFixed(2)} &#8451; </p>
-                                    <img src={`http://openweathermap.org/img/wn/${weatherNY[0] ? weatherNY[0].icon : ''}@2x.png`} alt="Clima" className="clima-img"/>
+                                    <img src={`http://openweathermap.org/img/wn/${weatherNY[0] ? weatherNY[0].icon : ''}@2x.png`} alt="Clima" width={50} />
                                 </div>
                                 <p className="clima-info-descripcion">{getClimaDescription(weatherNY[0] ? weatherNY[0].description : '')}</p>
                             </div>
@@ -86,14 +86,14 @@ export const ClimaMundo = () => {
 
 
             <Grid item md={3} xs={6}>
-                <Card>
-                    <CardContent className="card">
+                <Card className="card">
+                    <CardContent>
                         <h2>Tokio</h2>
                         { mainTokyo && weatherTokyo ? (
                             <div>
                                 <div className="clima-temp">
                                     <p className="clima-temp">{parseFloat(mainTokyo.temp - 273.15).toFixed(2)} &#8451; </p>
-                                    <img src={`http://openweathermap.org/img/wn/${weatherTokyo[0] ? weatherTokyo[0].icon : ''}@2x.png`} alt="Clima" className="clima-img"/>
+                                    <img src={`http://openweathermap.org/img/wn/${weatherTokyo[0] ? weatherTokyo[0].icon : ''}@2x.png`} alt="Clima" width={50} />
                                 </div>
                                 <p className="clima-info-descripcion">{getClimaDescription(weatherTokyo[0] ? weatherTokyo[0].description : '')}</p>
                             </div>
@@ -109,7 +109,7 @@ export const ClimaMundo = () => {
                             <div>
                                 <div className="clima-temp">
                                     <p className="clima-temp">{parseFloat(mainBogota.temp - 273.15).toFixed(2)} &#8451; </p>
-                                    <img src={`http://openweathermap.org/img/wn/${weatherBogota[0] ? weatherBogota[0].icon : ''}@2x.png`} alt="Clima" className="clima-img"/>
+                                    <img src={`http://openweathermap.org/img/wn/${weatherBogota[0] ? weatherBogota[0].icon : ''}@2x.png`} alt="Clima" width={50} />
                                 </div>
                                 <p className= "clima-info-descripcion ">{getClimaDescription(weatherBogota[0] ? weatherBogota[0].description : '')}</p>
                             </div>
@@ -125,7 +125,7 @@ export const ClimaMundo = () => {
                             <div>
                                 <div className="clima-temp">
                                     <p className="clima-temp">{parseFloat(mainMadrid.temp - 273.15).toFixed(2)} &#8451; </p>
-                                    <img src={`http://openweathermap.org/img/wn/${weatherMadrid[0] ? weatherMadrid[0].icon : ''}@2x.png`} alt="Clima" className="clima-img"/>
+                                    <img src={`http://openweathermap.org/img/wn/${weatherMadrid[0] ? weatherMadrid[0].icon : ''}@2x.png`} alt="Clima" width={50} />
                                 </div>
                                 <p className="clima-info-descripcion">{getClimaDescription(weatherMadrid[0] ? weatherMadrid[0].description : '')}</p>
                             </div>

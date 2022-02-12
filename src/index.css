@@ -33,11 +33,11 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
   color:rgb(54, 59, 156);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .clima-minmax{
@@ -64,3 +64,4 @@ code {
 .card{
   background-color: rgb(255, 209, 167) !important;
 }
+

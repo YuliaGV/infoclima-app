@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="App">
 
-      <Container style={{ textAlign: 'center' }}>
+      <Container style={{ textAlign: 'center'}}>
 
         <img src={logo} alt="logo" />
 
@@ -71,7 +71,13 @@ function App() {
             />
           </Grid>
 
-
+          <Grid item md={12} xs={12}>
+            <div className="footer">
+              <p>
+                Creado por <a href="https://github.com/YuliaGV">Yuliana Gaviria</a>
+              </p>
+            </div>
+          </Grid>
 
         </Grid>
 
